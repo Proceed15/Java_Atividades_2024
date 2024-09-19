@@ -62,7 +62,7 @@ public class MultiGrafos_Revelacao {
  
  
  
-        int arestas = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas arestas serão: "));
+        int arestas = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas ligações (entre vértices) serão: "));
  
        
  

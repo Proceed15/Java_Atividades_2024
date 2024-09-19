@@ -62,7 +62,7 @@ public class Grafos_Matriz_Adjacente {
  
  
  
-        int arestas = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas arestas serão: "));
+        int arestas = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas ligações (entre vértices) serão: "));
  
        
  
