@@ -1,4 +1,4 @@
-//Atividade Grafos (App.java) 2024
+//Atividade Grafos (App.java) 2024 Fazer a Distinção entre grafo completo e regular
  
 import javax.swing.JOptionPane;
  
