@@ -171,11 +171,11 @@ public class Grafos_Matriz_Adjacente {
  
         // Utiliza a função de verificação para caso o grafo seja simples ou não
  
-        if(verificaSMV(grafo, vertices))
+        if(verificaRER(grafo, vertices))
  
         {
  
-            JOptionPane.showMessageDialog(null, "O grafo é Multigrafo");
+            JOptionPane.showMessageDialog(null, "O grafo é Regular");
  
         }
  
@@ -183,7 +183,7 @@ public class Grafos_Matriz_Adjacente {
  
         {
  
-            JOptionPane.showMessageDialog(null, "O grafo é Simples");
+            JOptionPane.showMessageDialog(null, "O grafo é Completo");
  
         }
  
@@ -239,13 +239,13 @@ public class Grafos_Matriz_Adjacente {
  
     }
 
-    // Função de verificação para caso o grafo seja simples ou não
+    // Função de verificação para caso o grafo seja regular ou não
  
-    public static boolean verificaSMV(int grafo[][], int vertices)
+    public static boolean verificaRER(int grafo[][], int vertices)
  
     {
  
-        // Começa a verificação para ser um Grafo Simples
+        // Começa a verificação para ser um Grafo Regular
  
         for(int i = 0; i < vertices; i++)
  
@@ -262,9 +262,14 @@ public class Grafos_Matriz_Adjacente {
                 if(grafo[i][j] > 1 || i == j && grafo[i][j] >= 1)
  
                 {
- 
+                    if(grafo[i][j] >= 1)
+                    {
                     return true;
- 
+                    }
+                    else
+                    {
+                    return false;
+                    }
                 }
  
             }
