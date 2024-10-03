@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Digrafos_Matriz_Adjacente",
+            "request": "launch",
+            "mainClass": "Digrafos_Matriz_Adjacente",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "Grafos_Matriz_Adjacente",
+            "request": "launch",
+            "mainClass": "Grafos_Matriz_Adjacente",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "MainPessoa",
+            "request": "launch",
+            "mainClass": "MainPessoa",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "MultiGrafos_Revelacao",
+            "request": "launch",
+            "mainClass": "MultiGrafos_Revelacao",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "ArvoresBinariasExemplo23_05_2024",
+            "request": "launch",
+            "mainClass": "arvoresbinariasexemplo23_05_2024.ArvoresBinariasExemplo23_05_2024",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "Exercicio1ListaEncadeada",
+            "request": "launch",
+            "mainClass": "exercicio1listaencadeada.Exercicio1ListaEncadeada",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "Exercicio2ListaEncadeada",
+            "request": "launch",
+            "mainClass": "exercicio2listaencadeada.Exercicio2ListaEncadeada",
+            "projectName": "Java_Atividades_2024_51200720"
+        },
+        {
+            "type": "java",
+            "name": "FatorialRecursivoExemplo23_05_2024",
+            "request": "launch",
+            "mainClass": "fatorialrecursivoexemplo23_05_2024.FatorialRecursivoExemplo23_05_2024",
+            "projectName": "Java_Atividades_2024_51200720"
+        }
+    ]
+}
