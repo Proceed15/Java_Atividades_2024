@@ -5,7 +5,7 @@ public class Digrafos_Matriz {
     private int numVertices;
     private int[][] adjacencyMatrix;
 
-    public static void Main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception{
         Digrafos_Matriz graph = new Digrafos_Matriz(4);
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
