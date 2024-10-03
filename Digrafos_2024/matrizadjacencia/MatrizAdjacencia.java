@@ -2,65 +2,59 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Digrafos_2024;
+package Digrafos_2024.matrizadjacencia;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author José
+ * @author Jose
  */
-public class Digrafos_Matriz_Adjacencia {
+public class MatrizAdjacencia {
 
     public static void main(String[] args) {
-        int qtdeVertices, op, vOrigem, vDestino, vertice;
+        int qtdeVertices, qtdeAresta, op, vOrigem, vDestino, vAresta;
         qtdeVertices=Integer.parseInt(JOptionPane.showInputDialog(
-        "Informe a quantidade de vértices existentes no grafo:"));
-        Digrafo g = new Digrafo(qtdeVertices);
+        "Informe a quantidade de vértices existentes no digrafo:"));
+        qtdeAresta=Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de arestas existentes no digrafo"));
+        Grafo g = new Grafo(qtdeVertices, qtdeAresta);
         do{
             op = Integer.parseInt(
                     JOptionPane.showInputDialog(
-                      "1 - Adicionar aresta\n"
+                      " 1 - Definir Aresta Origem do vertice e Destino\n"
                     + "2 - Consultar número de arestas\n"
                     + "3 - Imprimir matriz de adjacência\n"
                     + "4 - Consultar grau de um vértice\n"
-                    + "5 - Digrafo simples ou MultiGrafo\n"
-                    //Opção 5 precisa informar a quantidade de arestas paralelas
-                    //no Digrafo e quais são os vértices envolvidos
-                    //Opção 6 precisa informar a quantidade de laços
-                    //no Digrafo e quais são os vértices envolvidos
-                    + "6 - Sair\n"
+                    + "5 - Grafo simples ou MultiGrafo\n"
+                    + "6 - Vértices vizinhos\n"
+                    + "7 - Sair\n"
                     + "Informe a opção desejada:"));
             switch(op){
                 case 1:
+                    
+                    for(int aresta=0; aresta<qtdeAresta; aresta++){
                     vOrigem=Integer.parseInt(
                            JOptionPane.showInputDialog(
                             "Informe o vértice de origem (valor maior que 0):"));
                     vDestino=Integer.parseInt(
                            JOptionPane.showInputDialog(
                             "Informe o vértice de destino(valor maior que 0):"));
-                    g.adicionarAresta(vOrigem, vDestino);
+               
+                    g.relacionarAresta(vOrigem, vDestino);
+                    }
                     break;
                 case 2:
                     JOptionPane.showMessageDialog(null, 
                             "O grafo possui " + g.getNumArestas() + "arestas.");
                     break;
                 case 3:
-                    g.imprimirDigrafo();
+                    g.imprimirGrafo();
                     break;
                 case 4:
-                    vertice=Integer.parseInt(
-                           JOptionPane.showInputDialog(
-                            "Informe o vértice para consultar o grau:"));
-                    JOptionPane.showMessageDialog(
-                            null, 
-                            "O grau do vértice informado é:" + 
-                                    g.consultaGrau(vertice));
+                    g.consultaGrau(qtdeVertices);
                     break;
                 case 5:
-                //Opção 5 precisa informar a quantidade de arestas paralelas
-                //no Digrafo e quais são os vértices envolvidos
-                    if(g.DigrafoSimples()){
+                    if(g.grafoSimples()){
                         JOptionPane.showMessageDialog(null, 
                                 "O grafo é simples (sem laços ou arestas paralelas)");
                     }
@@ -70,15 +64,16 @@ public class Digrafos_Matriz_Adjacencia {
                     }
                     break;
                 case 6:
-                //Opção 6 precisa informar a quantidade de laços
-                //no Digrafo e quais são os vértices envolvidos
+                    g.verticeVizinho();
+                    break;
+                case 7:
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,
                             "Opção inválida!");
                     break;    
             }
-        }while(op!=5);
+        }while(op!=7);
         
         
     }
