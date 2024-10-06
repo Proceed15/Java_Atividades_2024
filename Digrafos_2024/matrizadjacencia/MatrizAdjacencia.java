@@ -17,16 +17,16 @@ public class MatrizAdjacencia {
         qtdeVertices=Integer.parseInt(JOptionPane.showInputDialog(
         "Informe a quantidade de vértices existentes no digrafo:"));
         qtdeAresta=Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de arestas existentes no digrafo"));
-        Grafo g = new Grafo(qtdeVertices, qtdeAresta);
+        Digrafo g = new Digrafo(qtdeVertices, qtdeAresta);
         do{
             op = Integer.parseInt(
                     JOptionPane.showInputDialog(
-                      " 1 - Definir Aresta Origem do vertice e Destino\n"
+                      "1 - Definir Aresta de Origem e Destino do Vértice\n"
                     + "2 - Consultar número de arestas\n"
                     + "3 - Imprimir matriz de adjacência\n"
-                    + "4 - Consultar grau de um vértice\n"
+                    + "4 - Consultar grau de um Vértice\n"
                     + "5 - Grafo simples ou MultiGrafo\n"
-                    + "6 - Vértices vizinhos\n"
+                    + "6 - Vértices Vizinhos\n"
                     + "7 - Sair\n"
                     + "Informe a opção desejada:"));
             switch(op){

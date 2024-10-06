@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author Jose
  */
-public class Grafo {
+public class Digrafo {
     private int[][] matrizAdj;
     private int numVertices;
     private int numArestas;
     
-    public Grafo(int nVertices, int nAresta){
+    public Digrafo(int nVertices, int nAresta){
         matrizAdj = new int[nVertices][nVertices];
         numVertices = nVertices;
         numArestas = nAresta;
@@ -28,6 +28,10 @@ public class Grafo {
     }
     public void relacionarAresta(int origem, int destino){
         matrizAdj[origem-1][destino-1]+=1;
+        matrizAdj[origem-1][destino-1]+=1;
+        //Para Digrafos é uma origem e destino para cada aresta
+        //matrizAdj[destino-1][origem-1]+=1;
+        //this.nAresta++;
     }
     public int consultaGrau(int vertice){
         int grau=0;
