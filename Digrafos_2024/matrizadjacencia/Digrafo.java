@@ -26,6 +26,43 @@ public class Digrafo {
             }
         }
     }
+    public int getGrauEntrada(int vertice) {
+        int grau = 0;
+        for (int linha = 0; linha < this.numVertices; linha++) {
+            grau += matrizAdj[linha][vertice - 1];
+        }
+        return grau;
+    }
+    
+    public void getVerticeVizinho(int vertice) {
+        StringBuilder mensagem = new StringBuilder();
+        mensagem.append("Vértices vizinhos de ").append(vertice).append(":\n");
+        for (int coluna = 0; coluna < this.numVertices; coluna++) {
+            if (matrizAdj[vertice - 1][coluna] > 0) {
+                mensagem.append(coluna + 1).append(" ");
+            }
+        }
+        JOptionPane.showMessageDialog(null, mensagem.toString());
+    }
+    
+    public void contarArestasParalelasELacos() {
+        int arestasParalelas = 0;
+        int laços = 0;
+        StringBuilder mensagem = new StringBuilder();
+        for (int linha = 0; linha < this.numVertices; linha++) {
+            for (int coluna = 0; coluna < this.numVertices; coluna++) {
+                if (linha == coluna && matrizAdj[linha][coluna] > 0) {
+                    laços++;
+                    mensagem.append("Laço em ").append(linha + 1).append("\n");
+                } else if (matrizAdj[linha][coluna] > 1) {
+                    arestasParalelas++;
+                    mensagem.append("Aresta paralela entre ").append(linha + 1).append(" e ").append(coluna + 1).append("\n");
+                }
+            }
+        }
+        mensagem.insert(0, "Arestas paralelas: ").append(arestasParalelas).append("\nLaços: ").append(laços).append("\n");
+        JOptionPane.showMessageDialog(null, mensagem.toString());
+    }
     public void relacionarAresta(int origem, int destino){
         matrizAdj[origem-1][destino-1]+=1;
         matrizAdj[origem-1][destino-1]+=1;
