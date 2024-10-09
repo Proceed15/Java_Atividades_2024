@@ -25,13 +25,13 @@ public class MatrizAdjacencia {
                     + "2 - Consultar número de arestas\n"
                     + "3 - Imprimir matriz de adjacência\n"
                     + "4 - Consultar grau de um Vértice\n"
-                    + "5 - Grafo simples ou MultiGrafo\n"
-                    + "6 - Vértices Vizinhos\n"
-                    + "7 - Contar arestas paralelas e laços\n"
-                    + "8 - Sair\n"
+                    + "5 - Vértices Vizinhos\n"
+                    + "6 - Contar arestas paralelas e laços\n"
+                    + "7 - Sair\n"
+                    + "8 - Digrafo simples ou Complexo\n"
                     + "Informe a opção desejada:"));
             switch(op){
-                /*
+                /* Versão sem verificação de número do vértice com os já existentes
                 case 1:
                     
                     for(int aresta=0; aresta<qtdeAresta; aresta++){
@@ -69,35 +69,36 @@ public class MatrizAdjacencia {
                 break;
                 case 2:
                     JOptionPane.showMessageDialog(null, 
-                            "O grafo possui " + g.getNumArestas() + "arestas.");
+                            "O digrafo possui " + g.getNumArestas() + "arestas.");
                 break;
                 case 3:
-                    g.imprimirGrafo();
-                    break;
+                    g.imprimirDigrafo();
+                break;
                     case 4:
                     int vertice = Integer.parseInt(JOptionPane.showInputDialog("Informe o vértice para consultar o grau de entrada e saída:"));
                     JOptionPane.showMessageDialog(null, "Grau de entrada: " + g.getGrauEntrada(vertice) + "\nGrau de saída: " + g.consultaGrau(vertice));
                     //g.consultaGrau(qtdeVertices);
                 break;
-                case 5:
-                    if(g.grafoSimples()){
+                /*Parte com identificação digrafo simples ou não */
+                case 8:
+                    if(g.DigrafoSimples()){
                         JOptionPane.showMessageDialog(null, 
-                                "O grafo é simples (sem laços ou arestas paralelas)");
+                                "O digrafo é simples (sem laços ou arestas paralelas)");
                     }
                     else{
                         JOptionPane.showMessageDialog(null, 
-                                "O grafo é multigrafo (tem laços e/ou arestas paralelas)");
+                                "O digrafo é complexo (tem laços e/ou arestas paralelas)");
                     }
                 break;
-                case 6:
+                case 5:
                     int v = Integer.parseInt(JOptionPane.showInputDialog("Informe o vértice para consultar os vértices vizinhos:"));
                     g.getVerticeVizinho(v);
                     //g.verticeVizinho();
                 break;
-                case 7:
+                case 6:
                     g.contarArestasParalelasELacos();
                 break;
-                case 8:
+                case 7:
                 break;
                 default:
                     JOptionPane.showMessageDialog(null,

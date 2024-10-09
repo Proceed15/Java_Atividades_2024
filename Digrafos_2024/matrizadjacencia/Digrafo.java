@@ -65,7 +65,6 @@ public class Digrafo {
     }
     public void relacionarAresta(int origem, int destino){
         matrizAdj[origem-1][destino-1]+=1;
-        matrizAdj[origem-1][destino-1]+=1;
         //Para Digrafos é uma origem e destino para cada aresta
         //matrizAdj[destino-1][origem-1]+=1;
         //this.nAresta++;
@@ -80,7 +79,7 @@ public class Digrafo {
     public int getNumArestas(){
         return this.numArestas;
     }
-    public void imprimirGrafo(){
+    public void imprimirDigrafo(){
         String representacao="";
         for(int linha=0; linha<this.numVertices;linha++){
             for(int coluna=0; coluna<this.numVertices; coluna++){
@@ -91,7 +90,7 @@ public class Digrafo {
         JOptionPane.showMessageDialog(null,
                 "Matriz de Adjacência\n" + representacao);
     }
-    public boolean grafoSimples(){
+    public boolean DigrafoSimples(){
         int loop=0, arestaParalela=0;
         for(int linha=0; linha<this.numVertices;linha++){
             for(int coluna=0; coluna<this.numVertices; coluna++){
