@@ -1,4 +1,4 @@
-package Digrafos_2024.AtividadeDigrafosGrafos.AtvMatrizIncidencia;
+package Digrafos_2024.matrizincidencia;
 
 import javax.swing.JOptionPane;
 
