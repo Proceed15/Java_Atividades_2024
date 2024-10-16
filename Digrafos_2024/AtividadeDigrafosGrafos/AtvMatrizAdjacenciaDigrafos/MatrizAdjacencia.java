@@ -1,16 +1,25 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Digrafos_2024.AtividadeDigrafosGrafos.AtvMatrizAdjacencia;
-
+package atvmatrizadjacenciadigrafos;
 import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author 0031432412016
+ */
+public class AtvMatrizAdjacenciaDigrafos {
+
+    /**
+     * @param args the command line arguments
+     */
 
 /**
  *
  * @author Jose
  */
-public class MatrizAdjacencia {
 
     public static void main(String[] args) {
         int qtdeVertices, qtdeAresta, op, /*vOrigem, vDestino,*/ vAresta;
@@ -27,8 +36,8 @@ public class MatrizAdjacencia {
                     + "4 - Consultar grau de um Vértice\n"
                     + "5 - Vértices Vizinhos\n"
                     + "6 - Contar arestas paralelas e laços\n"
-                    + "7 - Sair\n"
-                    + "8 - Digrafo simples ou Complexo\n"
+                    + "7 - Digrafo simples ou Complexo\n"
+                    + "8 - Sair\n"
                     + "Informe a opção desejada:"));
             switch(op){
                 /* Versão sem verificação de número do vértice com os já existentes
@@ -74,22 +83,12 @@ public class MatrizAdjacencia {
                 case 3:
                     g.imprimirDigrafo();
                 break;
-                    case 4:
+                case 4:
                     int vertice = Integer.parseInt(JOptionPane.showInputDialog("Informe o vértice para consultar o grau de entrada e saída:"));
                     JOptionPane.showMessageDialog(null, "Grau de entrada: " + g.getGrauEntrada(vertice) + "\nGrau de saída: " + g.consultaGrau(vertice));
                     //g.consultaGrau(qtdeVertices);
                 break;
                 /*Parte com identificação digrafo simples ou não */
-                case 8:
-                    if(g.DigrafoSimples()){
-                        JOptionPane.showMessageDialog(null, 
-                                "O digrafo é simples (sem laços ou arestas paralelas)");
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null, 
-                                "O digrafo é complexo (tem laços e/ou arestas paralelas)");
-                    }
-                break;
                 case 5:
                     int v = Integer.parseInt(JOptionPane.showInputDialog("Informe o vértice para consultar os vértices vizinhos:"));
                     g.getVerticeVizinho(v);
@@ -99,13 +98,24 @@ public class MatrizAdjacencia {
                     g.contarArestasParalelasELacos();
                 break;
                 case 7:
+                    if(g.DigrafoSimples()){
+                        JOptionPane.showMessageDialog(null, 
+                                "O digrafo é simples (sem laços ou arestas paralelas)");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, 
+                                "O digrafo é complexo (tem laços e/ou arestas paralelas)");
+                    }
                 break;
+                case 8:
+                    JOptionPane.showMessageDialog(null, "Programa Finalizado.");
+                    System.exit(0);
                 default:
                     JOptionPane.showMessageDialog(null,
                             "Opção inválida!");
                 break;    
             }
-        }while(op!=7);
+        }while(op!=8);
         
         
     }
