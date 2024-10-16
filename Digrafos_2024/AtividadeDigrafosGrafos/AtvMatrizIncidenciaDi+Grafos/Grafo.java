@@ -44,8 +44,8 @@ public class Grafo {
         JOptionPane.showMessageDialog(null, "O grau do vértice " + vertice + " é " + grau);
     }
 
-    public void solicitarVerticeVizinho() {
-        int vertice = lerOrisDes("Digite o vértice para saber os vertViz", 1, numVertices);
+    public void VerticesVizinhos() {
+        int vertice = lerOrisDes("Digite o vértice para saber os Vertices Vizinhos", 1, numVertices);
         StringBuilder vertViz = new StringBuilder();
         for (int i = 0; i < numArestas; i++) {
             if (matrizIncidencia[vertice - 1][i] == 1) {
