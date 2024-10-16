@@ -1,10 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Digrafos_2024.AtividadeDigrafosGrafos.AtvMatrizAdjacencia;
-
+package atvmatrizadjacenciadigrafos;
 import javax.swing.JOptionPane;
+/**
+
+
 
 /**
  *
@@ -36,7 +39,7 @@ public class Digrafo {
     
     public void getVerticeVizinho(int vertice) {
         StringBuilder mensagem = new StringBuilder();
-        mensagem.append("Vértices vizinhos de ").append(vertice).append(":\n");
+        mensagem.append("Vértices Vizinhos de ").append(vertice).append(":\n");
         for (int coluna = 0; coluna < this.numVertices; coluna++) {
             if (matrizAdj[vertice - 1][coluna] > 0) {
                 mensagem.append(coluna + 1).append(" ");
@@ -56,7 +59,7 @@ public class Digrafo {
                     mensagem.append("Laço em ").append(linha + 1).append("\n");
                 } else if (matrizAdj[linha][coluna] > 1) {
                     arestasParalelas++;
-                    mensagem.append("Aresta paralela entre ").append(linha + 1).append(" e ").append(coluna + 1).append("\n");
+                    mensagem.append("Aresta Paralela entre ").append(linha + 1).append(" e ").append(coluna + 1).append("\n");
                 }
             }
         }
