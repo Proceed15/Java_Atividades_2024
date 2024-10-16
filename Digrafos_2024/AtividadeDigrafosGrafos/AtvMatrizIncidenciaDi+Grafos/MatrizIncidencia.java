@@ -34,7 +34,7 @@ public class MatrizIncidencia {
         digrafo.informarArestas();
         digrafo.imprimirMatrizIncidencia();
         digrafo.determinarGrauEntradaESaida();
-        digrafo.solicitarVerticeVizinho();
+        digrafo.VerticesVizinhos();
         digrafo.informarArestasParalelasELacos();
     }
 
