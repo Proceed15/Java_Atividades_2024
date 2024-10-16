@@ -1,4 +1,9 @@
-package Digrafos_2024.AtividadeDigrafosGrafos.AtvMatrizIncidencia;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package atvmatrizincidenciadi.grafos;
 
 import javax.swing.JOptionPane;
 
@@ -57,7 +62,7 @@ public class Grafo {
             }
         }
         String coordenadas = vertViz.length() > 0 ? vertViz.toString() : "Nenhum";
-        JOptionPane.showMessageDialog(null, "Os vertViz do vértice " + vertice + " são: " + coordenadas);
+        JOptionPane.showMessageDialog(null, "Os Vertices Vizinhos do vértice " + vertice + " são: " + coordenadas);
     }
 
     public void informarArestasParalelasELacos() {
