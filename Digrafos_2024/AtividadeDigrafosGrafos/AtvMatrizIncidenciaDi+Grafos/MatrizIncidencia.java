@@ -22,7 +22,7 @@ public class MatrizIncidencia {
         grafo.informarArestas();
         grafo.imprimirMatrizIncidencia();
         grafo.determinarGrau();
-        grafo.solicitarVerticeVizinho();
+        grafo.VerticesVizinhos();
         grafo.informarArestasParalelasELacos();
     }
 
