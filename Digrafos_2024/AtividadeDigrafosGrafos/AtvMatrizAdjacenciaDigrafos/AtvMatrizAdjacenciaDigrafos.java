@@ -78,7 +78,7 @@ public class AtvMatrizAdjacenciaDigrafos {
                 break;
                 case 2:
                     JOptionPane.showMessageDialog(null, 
-                            "O digrafo possui " + g.getNumArestas() + "arestas.");
+                            "O digrafo possui " + g.getNumArestas() + " arestas.");
                 break;
                 case 3:
                     g.imprimirDigrafo();
